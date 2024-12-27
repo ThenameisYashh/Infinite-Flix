@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="epindex.js" defer></script>
+    <link rel="stylesheet" href="epindex.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <header>
+      <a href="/index.html" class="logowr"><img src="/images/z-w.svg" alt="Zflix Logo"/></a>
+    </header>
+    <main>
+      <div class="heroWr"><img class="heroImg" src="" alt=""><div class="heroLogo"><img src="" alt=""></div></div>
+      <section>
+        <div class="deatailswr gme">
+          <div class="fstD"></div>
+          <div class="vl"></div>
+          <div class="scnD"></div>
+        </div>
+        <div class="mContainer gme">
+          <div class="mcinfowr">
+            <a id="mc-anchor">
+              <div id="mc-img"></div>
+            </a>
+            <div class="mcdes">
+              <p id="mc-des-p" ></p>
+              <div class="btnwr">
+                <a class="pbtn gme btnstyle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="13"
+                    height="14"
+                    version="1.1"
+                    viewBox="-1 0 12 14"
+                  >
+                    <title>Play</title>
+                    <desc>Created with Sketch.</desc>
+                    <g
+                      id="Symbols"
+                      fill="none"
+                      fill-rule="evenodd"
+                      stroke="none"
+                      stroke-width="1"
+                    >
+                      <g id="icons/smallPlay" fill="#fff">
+                        <path
+                          id="Page-1"
+                          d="M0,0 L0,13.02774 L11.2825,6.51386998 L0,0 Z M1.53258939,2.65425654 L7.12407488,5.88265838 L2.56539938,8.58825212 L2.56539938,6.00308174 L1.53258939,6.00308174 L1.53258939,2.65425654 Z"
+                        />
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+                <div class="runtime gme btnstyle"></div>
+                <div class="rating gme btnstyle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hep-s">
+          <p class="heading">Episodes</p>
+          <div class="seasons"></div>
+        </div>
+        <div class="sContainer">
+          <div class="epwr epwr1">
+            <button id="larr" class="arr gme" onclick="lscrl()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronLeftStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </button>
+            <div class="epsContainer"></div>
+            <button id="rarr" class="arr gme" onclick="rscrl()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronRightStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="epwrscnd epwr2">
+            <div onclick="arrrotate()" class="s2expander gme">
+              <h1 class="heading">Season 2</h1>
+              <div class="expandarr">
+                <img class="expimg" src="/images/narrow.svg" alt="" />
+              </div>
+            </div>
+            <div class="contantwr cwr2">
+              <button class="arr gme bl2" onclick="lscrl2()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  data-icon="ChevronLeftStandard"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <div class="epsContainer eps2Container"></div>
+              <button class="arr gme br2" onclick="rscrl2()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  data-icon="ChevronRightStandard"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="epwrscnd epwr3">
+            <div onclick="arrrotate2()" class="s2expander gme">
+              <h1 class="heading">Season 3</h1>
+              <div class="expandarr">
+                <img class="expimg expimg2" src="/images/narrow.svg" alt="" />
+              </div>
+            </div>
+            <div class="contantwr cwr3">
+              <button class="arr gme bl3" onclick="lscrl3()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  data-icon="ChevronLeftStandard"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+              <div class="epsContainer eps3Container"></div>
+              <button class="arr gme br3" onclick="rscrl3()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="white"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  data-icon="ChevronRightStandard"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
