@@ -143,6 +143,58 @@ fetch(`https://6751855ed1983b9597b336b6.mockapi.io/all/`)
     }
 
     //  </ANIME CARDS>  --------
+// Top Famouse Cards Arrow Function-----------------------
+rightArr.addEventListener("click", () => {
+  TFC.scrollLeft += Exhanchor.scrollWidth;
+  leftArr.style.display = "block";
+});
+
+leftArr.addEventListener("click", (e) => {
+  if (screenX === 0) {
+    leftArr.style.display = "none";
+  } else leftArr.style.display = "block";
+  TFC.scrollLeft += -9999;
+});
+
+// Movie Cards Arrow Function ----------------------------
+mrightArr.addEventListener("click", () => {
+  MC.scrollLeft += Exhanchor.scrollWidth;
+  mleftArr.style.display = "block";
+});
+
+mleftArr.addEventListener("click", (e) => {
+  if (screenX === 0) {
+    mleftArr.style.display = "none";
+  } else mleftArr.style.display = "block";
+  MC.scrollLeft += -9999;
+});
+
+// Series Cards Arrow Function ----------------------------
+srightArr.addEventListener("click", () => {
+  SC.scrollLeft += Exhanchor.scrollWidth;
+  sleftArr.style.display = "block";
+});
+
+sleftArr.addEventListener("click", (e) => {
+  if (screenX === 0) {
+    sleftArr.style.display = "none";
+  } else sleftArr.style.display = "block";
+  SC.scrollLeft += -9999;
+});
+
+// Anime Cards Arrow Function ----------------------------
+arightArr.addEventListener("click", () => {
+  AC.scrollLeft += Exhanchor.scrollWidth;
+  aleftArr.style.display = "block";
+});
+
+aleftArr.addEventListener("click", (e) => {
+  if (screenX === 0) {
+    aleftArr.style.display = "none";
+  } else aleftArr.style.display = "block";
+  AC.scrollLeft += -9999;
+});
+    
   });
 
 // SOME FUNCTIONALITY -----------------------------
@@ -178,57 +230,7 @@ box1.addEventListener("mouseleave", () => {
   b1img.style.rotate = "0deg";
 });
 
-// Top Famouse Cards Arrow Function-----------------------
-rightArr.addEventListener("click", () => {
-  TFC.scrollLeft += 180;
-  leftArr.style.display = "block";
-});
 
-leftArr.addEventListener("click", (e) => {
-  if (screenX === 0) {
-    leftArr.style.display = "none";
-  } else leftArr.style.display = "block";
-  TFC.scrollLeft += -9999;
-});
-
-// Movie Cards Arrow Function ----------------------------
-mrightArr.addEventListener("click", () => {
-  MC.scrollLeft += 180;
-  mleftArr.style.display = "block";
-});
-
-mleftArr.addEventListener("click", (e) => {
-  if (screenX === 0) {
-    mleftArr.style.display = "none";
-  } else mleftArr.style.display = "block";
-  MC.scrollLeft += -9999;
-});
-
-// Series Cards Arrow Function ----------------------------
-srightArr.addEventListener("click", () => {
-  SC.scrollLeft += 180;
-  sleftArr.style.display = "block";
-});
-
-sleftArr.addEventListener("click", (e) => {
-  if (screenX === 0) {
-    sleftArr.style.display = "none";
-  } else sleftArr.style.display = "block";
-  SC.scrollLeft += -9999;
-});
-
-// Anime Cards Arrow Function ----------------------------
-arightArr.addEventListener("click", () => {
-  AC.scrollLeft += 550;
-  aleftArr.style.display = "block";
-});
-
-aleftArr.addEventListener("click", (e) => {
-  if (screenX === 0) {
-    aleftArr.style.display = "none";
-  } else aleftArr.style.display = "block";
-  AC.scrollLeft += -9999;
-});
 
 const recommendation = document.querySelector(".recommendation");
 

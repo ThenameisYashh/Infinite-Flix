@@ -32,7 +32,7 @@ fetch(`https://6751855ed1983b9597b336b6.mockapi.io/all/${idnum}`)
       mContainer.style.display = "block";
     }
     let mimg = document.getElementById("mc-img");
-    mimg.style.backgroundImage = `url(${data.banner})`;
+    mimg.src = `${data.banner}`;
     document.getElementById("mc-des-p").innerText = `${data.Plot}`;
     document.querySelector(
       ".runtime"

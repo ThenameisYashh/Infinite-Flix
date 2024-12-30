@@ -1,47 +1,64 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 
 * {
   padding: 0;
   margin: 0;
-  color: white;
+  color: #fff;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: system-ui;
   scroll-behavior: smooth;
   text-decoration: none;
 }
+
 :root {
   --MW: 1500px;
 }
+
 body {
-  background-color: black;
+  background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
+
 .bg {
   background-size: cover;
   position: fixed;
   z-index: -1;
-  width: 100%;
   height: 100%;
+  -webkit-filter: blur(50px);
   filter: blur(50px);
   opacity: 0.5;
 }
+
+.bg,
 header {
   width: 100%;
-  max-width: var(--MW);
 }
+
 .logowr {
   height: 70px;
   display: block;
   margin: 9px 0;
 }
+
 .logowr img {
   height: 100%;
 }
+
+header,
 main {
   max-width: var(--MW);
 }
+
 .heroWr {
   width: 100%;
   height: 850px;
@@ -54,279 +71,438 @@ main {
   border-right: none;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-size: cover;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
+
 .heroWr::after {
   width: 100%;
-  box-shadow: #000001 0px -40px 124px 131px;
+  -webkit-box-shadow: #000001 0-40px 124px 131px;
+  box-shadow: #000001 0-40px 124px 131px;
   content: "";
 }
+
 .heroLogo {
   width: 32%;
   position: absolute;
-  padding: 0 0 30px 0;
+  padding: 0 0 30px;
 }
+
+.epimg img,
+.heroImg,
 .heroLogo img {
   width: 100%;
   height: 100%;
 }
-.heroImg {
-  width: 100%;
-  height: 100%;
-}
+
 .deatailswr {
   padding: 20px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 2.9%;
-  margin: 9px 0 30px 0px;
+  margin: 9px 0 30px;
 }
+
+.arr,
 .epwr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
-  position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
+
+.epwr {
+  overflow: hidden;
+  position: relative;
+}
+
 #larr {
   margin: 20px 0 0 10px;
   display: none;
 }
+
 #rarr {
   right: 0;
   margin: 20px 10px 0 0;
 }
+
 .arr {
   width: 40px;
   height: 90px;
   position: absolute;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  box-shadow: white 0px 0px 40px 0px;
+  -webkit-box-shadow: #fff 0 0 40px 0;
+  box-shadow: #fff 0 0 40px 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
+
 .epsContainer {
   padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   gap: 10px;
 }
-.ep {
+
+.ep,
+.epimg {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+}
+
+.ep {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 15px;
   padding: 13px;
 }
+
 .epimg {
   width: 290px;
   height: 170px;
   border-radius: 21px;
   overflow: hidden;
-  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
-.epimg img {
-  width: 100%;
-  height: 100%;
-}
+
 .runtime {
   position: absolute;
   padding: 6px 13px;
-  font-weight: 700;
-  font-size: 14px;
   margin: 9px;
 }
+
 .epinfo {
   padding: 0 20px;
 }
-.epNum {
+
+.epNum,
+.scnD label {
   font-size: 20px;
   font-weight: 700;
 }
+
 .epDes {
   line-height: 1.6;
   color: #ffffffba;
   font-size: 14px;
   padding-top: 5px;
 }
+
 section {
-  padding: 30px 69px 0 69px;
+  padding: 30px 69px 20px;
 }
+
 .heading {
   font-size: 33px;
   font-weight: 900;
 }
+
 .gme {
   border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 2px solid #ffffff1a;
   background-color: #ffffff14;
 }
+
 .fstD {
   width: 58.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
 }
+
 .vl {
   width: 1px;
   background: #ffffff38;
 }
+
 .scnD {
   width: 38.5%;
 }
-.scnD label {
-  font-size: 20px;
-  font-weight: 700;
-}
+
 .scnD p {
-  font-size: 14px;
-  color: #ffffffc7;
-  font-weight: 600;
   padding-top: 8px;
 }
+
 .hep-s {
   display: none;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
-.epPlot {
+
+.epPlot,
+.scnD p {
   color: #ffffffc7;
   font-size: 14px;
   font-weight: 600;
 }
+
 .seasons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 5px;
 }
-.s-opt{
-  padding: 7px 13px 12px 13px;
+
+.s-opt {
+  padding: 7px 13px 12px;
   font-weight: 600;
   font-size: 17px;
 }
-.br2 {
-  right: 0;
-}
+
+.br2,
 .br3 {
   right: 0;
 }
+
 .sContainer {
   display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 20px;
 }
+
 .s2expander {
-  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   background: #ffffff21;
-  padding: 12px 12px 16px 12px;
+  padding: 12px 12px 16px;
   cursor: pointer;
 }
-.expandarr {
+
+.expandarr,
+.s2expander {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .expimg {
   width: 41px;
   rotate: 90deg;
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+  -webkit-filter: invert(1);
   filter: invert(1);
 }
+
 .r0 {
   rotate: 0deg;
 }
+
 .contantwr {
   display: none;
   position: relative;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-transition: display 1s linear;
+  -o-transition: display 1s linear;
   transition: display 1s linear;
 }
+
 .cwrf {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .epwrscnd {
   border-radius: 10px;
 }
+
 .mContainer {
   display: none;
   padding: 30px;
 }
+
+.mcdes,
 .mcinfowr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
+
 #mc-anchor {
   display: block;
   width: 400px;
   height: 225px;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: #00000033 5px 2px 0px 4px;
+  -webkit-box-shadow: #00000033 3px 2px 0 0;
+  box-shadow: #00000033 3px 2px 0 0;
 }
+
 #mc-img {
   width: 100%;
   height: 100%;
-  background-size: cover;
 }
+
 .mcdes {
   width: 60%;
-  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  justify-content: space-between;
 }
+
 .pbtn {
   cursor: pointer;
 }
+
+.btnstyle,
 .btnwr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.btnwr {
   gap: 30px;
 }
+
 .btnstyle {
-  width: 150px;
+  width: 100%;
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  padding: 0;
+  margin: 0;
 }
+
+.pbtn svg {
+  width: 17px;
+  height: 17px;
+}
+
 @media only screen and (max-width: 1300px) {
   :root {
     --MW: 1200px;
   }
+
   .logowr {
     height: 65px;
   }
+
   .heroWr {
     height: 800px;
   }
+
   .deatailswr {
     padding: 15px 25px;
     gap: 2%;
   }
+
   .heading {
     font-size: 31px;
   }
+
   .ep {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 15px;
     padding: 13px;
   }
+
   .epimg {
     width: 270px;
     height: 155px;
     border-radius: 20px;
   }
+
+  .mContainer {
+    padding: 20px;
+  }
+
+  .mcdes {
+    width: 61%;
+  }
+
+  #mc-anchor {
+    width: 380px;
+    height: 215px;
+    border-radius: 18px;
+  }
+
+  #mc-des-p {
+    font-size: 15px;
+  }
+
+  .btnstyle {
+    height: 55px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .pbtn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .btnwr {
+    gap: 28px;
+  }
 }
+
 @media only screen and (max-width: 1200px) {
   :root {
     --MW: 1100px;
   }
+
   .logowr {
     height: 60px;
   }
+
   .heroWr {
     height: 750px;
     border: 7px ridge #9a9a9a;
@@ -334,75 +510,146 @@ section {
     border-left: none;
     border-right: none;
   }
+
   .epinfo {
     padding: 0 18px;
   }
+
   .epNum {
-  font-size: 18px;
-  font-weight: 700;
+    font-size: 18px;
+    font-weight: 700;
   }
+
   .epDes {
-  line-height: 1.4;
-  color: #ffffffba;
-  font-size: 13px;
-  padding-top: 5px;
+    line-height: 1.4;
+    color: #ffffffba;
+    font-size: 13px;
+    padding-top: 5px;
   }
+
   .heading {
     font-size: 29px;
     font-weight: 800;
   }
+
   .s-opt {
-    padding: 6px 13px 5px 13px;
+    padding: 6px 13px 5px;
   }
+
   .ep {
     gap: 15px;
     padding: 9px;
   }
+
   .epimg {
     width: 250px;
     height: 140px;
   }
+
+  .mContainer {
+    padding: 18px;
+  }
+
+  .mcdes {
+    width: 59%;
+  }
+
+  #mc-anchor {
+    width: 360px;
+    height: 205px;
+    border-radius: 16px;
+  }
+
+  #mc-des-p {
+    font-size: 14px;
+  }
+
+  .btnstyle {
+    height: 50px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .pbtn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .btnwr {
+    gap: 26px;
+  }
 }
+
 @media only screen and (max-width: 1100px) {
   :root {
     --MW: 1000px;
   }
+
   .logowr {
     height: 55px;
   }
+
   .heroWr {
     height: 700px;
   }
-  .runtime {
-  position: absolute;
-  padding: 4px 7px;
-  font-weight: 600;
-  font-size: 12px;
-  margin: 7px;
-  }
+
   .heading {
     font-size: 27px;
     font-weight: 800;
   }
+
   .s-opt {
-    padding: 5px 13px 5px 13px;
+    padding: 5px 13px;
   }
+
   .ep {
     padding: 8px;
   }
+
   .epimg {
     width: 230px;
     height: 130px;
     border-radius: 19px;
   }
+
+  .mContainer {
+    padding: 16px;
+  }
+
+  .mcdes {
+    width: 57%;
+  }
+
+  #mc-anchor {
+    width: 340px;
+    height: 195px;
+    border-radius: 14px;
+  }
+
+  #mc-des-p {
+    font-size: 13px;
+  }
+
+  .btnstyle {
+    height: 45px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .btnwr {
+    gap: 24px;
+  }
 }
+
 @media only screen and (max-width: 1000px) {
   :root {
     --MW: 900px;
   }
+
   .logowr {
     height: 50px;
   }
+
   .heroWr {
     height: 650px;
     border: 6px ridge #9a9a9a;
@@ -410,77 +657,163 @@ section {
     border-left: none;
     border-right: none;
   }
+
   .deatailswr {
     padding: 10px 15px;
   }
+
   .heading {
     font-size: 25px;
     font-weight: 800;
   }
+
   .s-opt {
-    padding: 7px 12px 12px 12px;
+    padding: 7px 12px 12px;
     font-size: 15px;
   }
+
   .ep {
     gap: 15px;
   }
+
   .epimg {
     width: 210px;
     height: 120px;
   }
+
+  .mcdes {
+    width: 54%;
+  }
+
+  #mc-anchor {
+    width: 320px;
+    height: 185px;
+    border-radius: 13px;
+  }
+
+  #mc-des-p {
+    font-size: 12px;
+  }
+
+  .btnstyle {
+    height: 40px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .pbtn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .btnwr {
+    gap: 22px;
+  }
 }
+
 @media only screen and (max-width: 900px) {
   :root {
     --MW: 800px;
   }
+
   section {
-    padding: 30px 49px 0 49px;
+    padding: 30px 49px 20px;
   }
+
   .logowr {
     height: 45px;
   }
+
   .heroWr {
     height: 600px;
   }
+
   .epinfo {
     padding: 0 15px;
   }
+
   .epNum {
-  font-size: 17px;
-  font-weight: 600;
+    font-size: 17px;
+    font-weight: 600;
   }
+
   .epDes {
-  line-height: 1.4;
-  color: #ffffffba;
-  font-size: 12px;
-  padding-top: 5px;
+    line-height: 1.4;
+    color: #ffffffba;
+    font-size: 12px;
+    padding-top: 5px;
   }
+
   .heading {
     font-size: 21px;
   }
+
   .s-opt {
-    padding: 7px 11px 11px 11px;
+    padding: 7px 11px 11px;
     font-size: 14px;
   }
+
   .ep {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 15px;
     padding: 7px;
   }
+
   .epimg {
     width: 180px;
     height: 105px;
     border-radius: 18px;
   }
+
+  .mContainer {
+    padding: 14px;
+  }
+
+  .mcdes {
+    width: 53%;
+  }
+
+  #mc-anchor {
+    width: 300px;
+    height: 175px;
+    border-radius: 12px;
+  }
+
+  #mc-des-p {
+    font-size: 12px;
+  }
+
+  .btnstyle {
+    height: 37px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .pbtn svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .btnwr {
+    gap: 20px;
+  }
 }
+
 @media only screen and (max-width: 800px) {
   :root {
     --MW: 700px;
   }
+
   .logowr {
     height: 40px;
   }
+
   .heroWr {
     height: 500px;
     border: 5px ridge #9a9a9a;
@@ -488,93 +821,180 @@ section {
     border-left: none;
     border-right: none;
   }
+
   .heroWr::after {
     width: 100%;
-    box-shadow: #000001 0px -30px 69px 60px;
+    -webkit-box-shadow: #000001 0-30px 69px 60px;
+    box-shadow: #000001 0-30px 69px 60px;
     content: "";
-}
-  .runtime {
-    position: absolute;
-    padding: 3px 6px;
-    font-weight: 600;
-    font-size: 11px;
-    margin: 6px;
   }
+
   .epinfo {
-  padding: 0 13px;
+    padding: 0 13px;
   }
+
   .deatailswr {
     width: auto;
     display: block;
     padding: 15px 25px;
   }
+
   .fstD {
     width: auto;
   }
+
   .vl {
     width: 100%;
     height: 1px;
     margin: 13px 0;
   }
+
   .scnD {
     width: auto;
   }
+
   .heading {
     font-size: 20px;
   }
+
   .s-opt {
-    padding: 7px 10px 10px 10px;
+    padding: 7px 10px 10px;
     font-size: 13px;
   }
+
   .ep {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 15px;
   }
+
   .epimg {
     width: 170px;
     height: 100px;
     border-radius: 18px;
   }
+
+  .mcdes {
+    width: 49%;
+  }
+
+  #mc-anchor {
+    width: 280px;
+    height: 165px;
+    border-radius: 11px;
+  }
+
+  #mc-des-p,
+  .btnstyle {
+    font-size: 10px;
+  }
+
+  .btnstyle {
+    height: 33px;
+    font-weight: 500;
+  }
+
+  .pbtn svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .btnwr {
+    gap: 10px;
+  }
 }
+
 @media only screen and (max-width: 700px) {
   :root {
     --MW: 600px;
   }
+
   .logowr {
     height: 35px;
   }
+
   .heroWr {
     height: 400px;
   }
+
   .heading {
     font-size: 19px;
   }
+
   .s-opt {
-    padding: 7px 9px 9px 9px;
+    padding: 7px 9px 9px;
     font-size: 12px;
   }
+
   .ep {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 15px;
   }
+
   .epimg {
     width: 160px;
     height: 95px;
     border-radius: 17px;
   }
+
+  .mContainer {
+    padding: 12px;
+  }
+
+  .mcdes {
+    width: 43%;
+  }
+
+  #mc-anchor {
+    width: 260px;
+    height: 155px;
+    border-radius: 10px;
+  }
+
+  #mc-des-p {
+    font-size: 9px;
+  }
+
+  .btnstyle {
+    height: 30px;
+    font-size: 8px;
+    font-weight: 500;
+  }
+
+  .pbtn svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .btnwr {
+    gap: 4px;
+  }
 }
+
 @media only screen and (max-width: 600px) {
   :root {
     --MW: 500px;
   }
+
   section {
-    padding: 30px 39px 0 39px;
+    padding: 20px 33px;
   }
+
   .logowr {
     height: 30px;
   }
+
   .heroWr {
     height: 350px;
     border: 4px ridge #9a9a9a;
@@ -582,54 +1002,96 @@ section {
     border-left: none;
     border-right: none;
   }
-  .runtime {
-  position: absolute;
-  padding: 3px 6px;
-  font-weight: 600;
-  font-size: 10px;
-  margin: 5px;
-  }
+
   .epinfo {
     padding: 0 10px;
   }
+
   .epNum {
-  font-size: 15px;
-  font-weight: 600;
+    font-size: 15px;
+    font-weight: 600;
   }
+
   .epDes {
-  line-height: 1.4;
-  color: #ffffffba;
-  font-size: 11px;
-  padding-top: 5px;
+    line-height: 1.4;
+    color: #ffffffba;
+    font-size: 11px;
+    padding-top: 5px;
   }
+
   .deatailswr {
     padding: 10px 15px;
   }
+
   .heading {
     font-size: 18px;
   }
+
   .s-opt {
-    padding: 6px 8px 8px 8px;
+    padding: 6px 8px 8px;
     font-size: 11px;
   }
+
   .ep {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 15px;
   }
+
   .epimg {
     width: 150px;
     height: 90px;
     border-radius: 17px;
   }
+
+  .mContainer {
+    padding: 10px;
+  }
+
+  .mcdes {
+    width: 44%;
+  }
+
+  #mc-anchor {
+    width: 220px;
+    height: 140px;
+    border-radius: 9px;
+  }
+
+  #mc-des-p {
+    font-size: 8px;
+  }
+
+  .btnstyle {
+    height: 23px;
+    font-size: 7px;
+    font-weight: 500;
+  }
+
+  .pbtn svg {
+    width: 9px;
+    height: 9px;
+  }
+
+  .btnwr {
+    gap: 2px;
+  }
 }
+
 @media only screen and (max-width: 500px) {
   :root {
     --MW: 400px;
   }
+
   .logowr {
     height: 25px;
   }
+
   .heroWr {
     height: 300px;
     border: 3.5px ridge #ababab;
@@ -637,37 +1099,70 @@ section {
     border-left: none;
     border-right: none;
   }
-  .runtime {
-    position: absolute;
-    padding: 2px 5px;
-    font-weight: 600;
-    font-size: 9px;
-    margin: 5px;
-  }
+
   .heading {
     font-size: 17px;
   }
+
   .s-opt {
-    padding: 5px 7px 7px 7px;
+    padding: 5px 7px 7px;
     font-size: 8px;
   }
+
   .ep {
     gap: 15px;
     padding: 6px;
   }
+
   .epimg {
     width: 140px;
     height: 85px;
     border-radius: 16px;
   }
+
+  .mContainer {
+    padding: 6px;
+  }
+
+  .mcdes {
+    width: 48%;
+  }
+
+  #mc-anchor {
+    width: 160px;
+    height: 99px;
+    border-radius: 8px;
+  }
+
+  #mc-des-p,
+  .btnstyle {
+    font-size: 6px;
+  }
+
+  .btnstyle {
+    height: 20px;
+    font-weight: 400;
+  }
+
+  .pbtn svg {
+    width: 8px;
+    height: 8px;
+  }
+
+  .btnwr {
+    gap: 4px;
+  }
 }
+
 @media only screen and (max-width: 400px) {
   :root {
     --MW: 318px;
   }
+
   .logowr {
     height: 20px;
   }
+
   .heroWr {
     height: 250px;
     border: 2.5px ridge #b8b8b8;
@@ -675,19 +1170,57 @@ section {
     border-left: none;
     border-right: none;
   }
+
   .heading {
     font-size: 15px;
   }
+
   .s-opt {
-    padding: 4px 6px 6px 6px;
+    padding: 4px 6px 6px;
     font-size: 7px;
   }
+
   .ep {
     padding: 5px;
   }
+
   .epimg {
     width: 130px;
     height: 80px;
     border-radius: 15px;
+  }
+
+  .mContainer {
+    padding: 4px;
+  }
+
+  .mcdes {
+    width: 47%;
+  }
+
+  #mc-des-p {
+    line-height: 6.5px;
+    font-size: 5px;
+  }
+
+  #mc-anchor {
+    width: 120px;
+    height: 80px;
+    border-radius: 7px;
+  }
+
+  .btnstyle {
+    height: 20px;
+    font-size: 6px;
+    font-weight: 400;
+  }
+
+  .pbtn svg {
+    width: 7px;
+    height: 7px;
+  }
+
+  .btnwr {
+    gap: 2px;
   }
 }
