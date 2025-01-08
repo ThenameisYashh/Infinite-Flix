@@ -2,18 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <title>
-      Zflix - Watch Unlimited Free Webseries, Anime and Movies Online
-    </title>
-    <link rel="shortcut icon" href="images/zflix logo.png" type="image/x-icon"  style="filter: invert(1);"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zflix - Watch Underrated Free Webseries, Anime and Movies</title>
+    <link
+      rel="shortcut icon"
+      href="images/zflix logo.png"
+      type="image/x-icon"
+      style="filter: invert(1)"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="bg"></div>
+    <div class="bg" onclick="normalise()"></div>
     <!-- Loader Screen  -->
-<!-- 
+    <!-- 
     <div class="loader-wrapper">
     <div class="loader"><img src="images/fav-icon.png" alt="">
         <span>Infinite Flix</span>
@@ -23,165 +26,296 @@
 
     <!-- /Loader Screen  -->
 
-
     <!-- <div class="mubtn"><img class="sbtn v" src="images/v.png"><img class="vm sbtn" src="images/vm.png"></div> -->
 
-
     <!-- Header Section -->
-     
+
     <header>
-        <div class="h-item-wr">
+      <div class="h-item-wr">
         <a href="index.html" class="nav-logo">
-            <img id="hlgo1" src="images/z-w.svg" alt="">                  
+          <img id="hlgo1" src="images/z-w.svg" alt="" />
         </a>
-          <div class="sContainer" id="box1" onclick="Search()" ><input placeholder="Search Anything" id="sInput" class="icon-theme" ><img class="img-theme"  id="box1img" src="images/mg.svg"></div>
-          <div class="icon-theme" id="box2"><a href="l&s-page/login.html"><img class="img-theme" id="defaulttwo" src="images/u1.png"><img id="two" class="img-theme img-theme2" src="images/u2.png"></a> <p>User Name</p></div>
-          <div class="icon-theme" id="box3" onclick="Catagory()"><abbr title="Disabled Offcialy"><img class="img-theme" id="defaultthree" src="images/c1.png"><img id="three" class="img-theme img-theme2" src="images/c2.png"></abbr></div>
+        <div class="sCWrapper">
+          <div class="sContainer" id="box1" onclick="Search()">
+            <input
+              placeholder="Search Anything"
+              id="sInput"
+              class="icon-theme"
+            /><img class="img-theme" id="box1img" src="images/mg.svg" />
+          </div>
+          <div class="textRecWr" onclick="normalise()"></div>
+        </div>
+        <div class="icon-theme" id="box2">
+          <a href="l&s-page/login.html"
+            ><img class="img-theme" id="defaulttwo" src="images/u1.png" /><img
+              id="two"
+              class="img-theme img-theme2"
+              src="images/u2.png"
+          /></a>
+          <p>User Name</p>
+        </div>
+        <div class="icon-theme" id="box3" onclick="Catagory(), normalise()">
+          <abbr title="Disabled Offcialy"
+            ><img class="img-theme" id="defaultthree" src="images/c1.png" /><img
+              id="three"
+              class="img-theme img-theme2"
+              src="images/c2.png"
+          /></abbr>
+        </div>
       </div>
-      </header>
+    </header>
     <!-- /Header Section -->
 
     <!-- Main Section -->
-    <main>
-        <div class="feedback"><p>FEEDBACK</p></div>
-        <div class="rec-wrapper">
-                <ul class="recommendation">  
-                </ul>
-            <button class="r-w-btn"><span>Show More</span>
-                <div class="spinner">
-                <div></div>   
-                <div></div>    
-                <div></div>    
-                <div></div>    
-              </div>
-            </button>
-        </div>
-        <div class="hero-wr">
-    </div>
-
-<!-- ​‌‌‍⁡⁢⁢⁢𝗖𝗢𝗡𝗧𝗘𝗡𝗧 𝗦𝗲𝗰𝘁𝗶𝗼𝗻 ⁡​ -->
-
-        <section class="content-wrapper">
-          <div class="content">
-            <div class="content-text">Top famous</div>
-            <div class="content-card-box">
-                <div id="larr" class="left-arr arr1 arr">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
-                  </svg>
-              </div>
-
-              <div id="Top-Famouse-cards" class="content-cards">
-              </div>
-              <div id="rarr" class="right-arr arr2 arr">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="white" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path>
-                  </svg>
-              </div> 
-          </div>
-          </div>
-
-<!-- ⁡⁢⁢⁢​‌‌‍‍𝗟𝗲𝘁𝗲𝘀𝘁 𝗥𝗲𝗹𝗲𝗮𝘀𝗲𝘀 𝗦𝗲𝗰𝘁𝗶𝗼𝗻​⁡  -->
-
-          <div class="content">
-            <div class="content-text">Letest Relaeses</div>
-            <div class="content-card-box">
-                <div id="larr" class="left-arr arr1 arr">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
-                    </svg>
-                </div>
-              <ul id="Letest-release-cards" class="content-cards"></ul>
-          </div>
-          </div>
-
-<!-- ​‌‌‍⁡⁢⁢⁢‍𝗺𝗶𝗻𝗱 𝗯𝗹𝗼𝘄𝗶𝗻𝗴 𝘀𝗲𝗿𝗶𝗲𝘀 𝘀𝗲𝗰𝘁𝗶𝗼𝗻⁡​​ -->
-
-<div class="content">
-  <div class="content-text">Mind Blowing Shows
-  </div>
-  <div class="content-card-box">
-    <ul id="Mindblowing-Shows-cards" class="content-cards"></ul>
-</div>
-</div>
-
-<!-- ⁡⁢⁢⁢​‌‌‍𝗠𝗼𝘃𝗶𝗲𝘀 𝗦𝗲𝗰𝘁𝗶𝗼𝗻​⁡​⁡  -->
-
-<div class="content">
-  <div class="content-text">Movies</div>
-  <div class="content-card-box">
-    <div id="mlarr" class="left-arr arr1 arr">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
-        </svg>
-    </div>
-
-    <ul id="Movies-cards" class="content-cards">
-    </ul>
-    <div id="mrarr" class="right-arr arr2 arr">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path>
-        </svg>
-    </div>
-
-    </div>
-  </div>
-
-<!-- ⁡⁢⁢⁢​‌‌‍‍‍𝗦𝗲𝗿𝗶𝗲𝘀 𝗦𝗲𝗰𝘁𝗶𝗼𝗻​⁡⁡  -->
-
-<div class="content">
-  <div class="content-text">Series</div>
-  <div class="content-card-box">
-    <div id="slarr" class="left-arr arr1 arr">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
-        </svg>
-    </div>
-
-    <ul id="Series-cards" class="content-cards">
-    </ul>
-    <div id="srarr" class="right-arr arr2 arr">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path>
-        </svg>
-    </div>
-</div>
-</div>
-
-<!-- ​‌‌‍⁡⁢⁢⁢‍‍𝗔𝗻𝗶𝗺𝗲 𝗦𝗲𝗰𝘁𝗶𝗼𝗻⁡​⁡  -->
-
-<div class="content">
-  <div class="content-text">Anime</div>
-  <div class="content-card-box">
-    <div id="alarr" class="left-arr arr1 arr">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronLeftStandard" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z" fill="currentColor"></path>
-        </svg>
-    </div>
-    <ul id="Anime-cards" class="content-cards Animecards">
-    </ul>
-    <div id="ararr" class="right-arr arr2 arr">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" role="img" viewBox="0 0 24 24" width="24" height="24" data-icon="ChevronRightStandard" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path>
-        </svg>
-       </div>
+    <main onclick="normalise()">
+      <div class="feedback"><p>FEEDBACK</p></div>
+      <div class="rec-wrapper">
+        <ul class="recommendation"></ul>
       </div>
-     </div>
-    </section>
-   </main>
+      <div class="hero-wr"></div>
+
+      <!-- ​‌‌‍⁡⁢⁢⁢𝗖𝗢𝗡𝗧𝗘𝗡𝗧 𝗦𝗲𝗰𝘁𝗶𝗼𝗻 ⁡​ -->
+
+      <section class="content-wrapper">
+        <div class="content">
+          <div class="content-text">Top famous</div>
+          <div class="content-card-box">
+            <div id="larr" class="left-arr arr1 arr">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronLeftStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+
+            <div id="Top-Famouse-cards" class="content-cards"></div>
+            <div id="rarr" class="right-arr arr2 arr">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronRightStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- ⁡⁢⁢⁢​‌‌‍‍𝗟𝗲𝘁𝗲𝘀𝘁 𝗥𝗲𝗹𝗲𝗮𝘀𝗲𝘀 𝗦𝗲𝗰𝘁𝗶𝗼𝗻​⁡  -->
+
+        <div class="content">
+          <div class="content-text">Letest Relaeses</div>
+          <div class="content-card-box">
+            <div id="larr" class="left-arr arr1 arr">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronLeftStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <ul id="Letest-release-cards" class="content-cards"></ul>
+          </div>
+        </div>
+
+        <!-- ​‌‌‍⁡⁢⁢⁢‍𝗺𝗶𝗻𝗱 𝗯𝗹𝗼𝘄𝗶𝗻𝗴 𝘀𝗲𝗿𝗶𝗲𝘀 𝘀𝗲𝗰𝘁𝗶𝗼𝗻⁡​​ -->
+
+        <div class="content">
+          <div class="content-text">Mind Blowing Shows</div>
+          <div class="content-card-box">
+            <ul id="Mindblowing-Shows-cards" class="content-cards"></ul>
+          </div>
+        </div>
+
+        <!-- ⁡⁢⁢⁢​‌‌‍𝗠𝗼𝘃𝗶𝗲𝘀 𝗦𝗲𝗰𝘁𝗶𝗼𝗻​⁡​⁡  -->
+
+        <div class="content">
+          <div class="content-text">Movies</div>
+          <div class="content-card-box">
+            <div id="mlarr" class="left-arr arr1 arr">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronLeftStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+
+            <ul id="Movies-cards" class="content-cards"></ul>
+            <div id="mrarr" class="right-arr arr2 arr">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronRightStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- ⁡⁢⁢⁢​‌‌‍‍‍𝗦𝗲𝗿𝗶𝗲𝘀 𝗦𝗲𝗰𝘁𝗶𝗼𝗻​⁡⁡  -->
+
+        <div class="content">
+          <div class="content-text">Series</div>
+          <div class="content-card-box">
+            <div id="slarr" class="left-arr arr1 arr">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronLeftStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+
+            <ul id="Series-cards" class="content-cards"></ul>
+            <div id="srarr" class="right-arr arr2 arr">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronRightStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- ​‌‌‍⁡⁢⁢⁢‍‍𝗔𝗻𝗶𝗺𝗲 𝗦𝗲𝗰𝘁𝗶𝗼𝗻⁡​⁡  -->
+
+        <div class="content">
+          <div class="content-text">Anime</div>
+          <div class="content-card-box">
+            <div id="alarr" class="left-arr arr1 arr">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronLeftStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.41409 12L15.707 19.2928L14.2928 20.7071L6.29277 12.7071C6.10523 12.5195 5.99988 12.2652 5.99988 12C5.99988 11.7347 6.10523 11.4804 6.29277 11.2928L14.2928 3.29285L15.707 4.70706L8.41409 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <ul id="Anime-cards" class="content-cards Animecards"></ul>
+            <div id="ararr" class="right-arr arr2 arr">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                role="img"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                data-icon="ChevronRightStandard"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- /Main Section -->
 
-<!-- Footer Section Start -->
+    <!-- Footer Section Start -->
 
-<footer>
-    <div class="content">
+    <footer>
+      <div class="content">
         <ul class="footer-ul">
-            <li class="footer-li"></li>
-            <li class="footer-li"></li>
+          <li class="footer-li"></li>
+          <li class="footer-li"></li>
         </ul>
-    </div>
-</footer>
-<!-- /Footer Section  -->
-
+      </div>
+    </footer>
+    <!-- /Footer Section  -->
   </body>
 </html>
