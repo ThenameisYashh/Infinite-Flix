@@ -1,6 +1,6 @@
 const loaderwrapper = document.querySelector(".loader-wrapper");
-const main = document.querySelector('main');
-const body = document.querySelector('body');
+const main = document.querySelector("main");
+const body = document.querySelector("body");
 const three = document.getElementById("three");
 const defaultthree = document.getElementById("defaultthree");
 const box1 = document.getElementById("box1");
@@ -190,7 +190,130 @@ fetch(`https://6751855ed1983b9597b336b6.mockapi.io/all/`)
       AC.scrollLeft += Exhanchor.scrollWidth + 8;
       aleftArr.style.display = "block";
     });
-    
+
+    aleftArr.addEventListener("click", (e) => {
+      if (screenX === 0) {
+        aleftArr.style.display = "none";
+      } else aleftArr.style.display = "block";
+      AC.scrollLeft += -9999;
+    });
+  });
+fetch(`https://6751855ed1983b9597b336b6.mockapi.io/sall/`)
+  .then((res) => res.json())
+  .then((data) => {
+    //  <⁡⁢⁣⁢TOP FAMOUSE SHOWS CARDS⁡>  --------
+    const BLanchor = document.createElement("a");
+    BLanchor.classList.add("card");
+    BLanchor.innerHTML = `<img class="c-h-w-s" src="${data[0].banner}">`;
+    BLanchor.href = "/epindex/epindex.html?name=Blue_Lock";
+    TFC.append(BLanchor);
+
+    //  </⁡⁢⁣⁢TOP FAMOUSE SHOWS CARDS⁡>  --------
+
+    //  <⁡⁣⁢⁢LETEST RELEASES CARDS⁡>  --------
+
+    const BLLanchor = document.createElement("a");
+    BLLanchor.classList.add("card");
+    BLLanchor.innerHTML = `<img class="c-h-w-s" src="${data[0].banner}">`;
+    BLLanchor.href = "/epindex/epindex.html?name=Blue_Lock";
+    LRC.append(BLLanchor);
+
+    //  </⁡⁣⁢⁡⁣⁢⁢LETEST RELEASES CARDS⁡>  --------
+
+    //  <⁡⁣⁣⁢MINDBLOWING SHOWS CARDS⁡>  --------
+
+    //  </⁡⁣⁣⁢MINDBLOWING SHOWS CARDS⁡>  --------
+
+    //  <MOVIES CARDS>  --------
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].Type == "Movie") {
+        const manchor = document.createElement("a");
+        manchor.classList.add("card");
+        manchor.href = `/epindex/epindex.html?name=${data[i].Title}`;
+        manchor.innerHTML = `<img class="c-h-w-s" src="${data[i].banner}">`;
+        MC.append(manchor);
+      }
+    }
+    //  </MOVIES CARDS>  --------
+
+    //  <SERIES CARDS>  --------
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].Type == "Series") {
+        const sanchor = document.createElement("a");
+        sanchor.classList.add("card");
+        sanchor.href = `/epindex/epindex.html?name=${data[i].Title}`;
+        sanchor.innerHTML = `<img class="c-h-w-s" src="${data[i].banner}">`;
+        SC.append(sanchor);
+      }
+    }
+    //  </SERIES CARDS>  --------
+
+    //  <ANIME CARDS>  --------
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].Type == "Anime") {
+        const Aanchor = document.createElement("a");
+        Aanchor.classList.add("card");
+        Aanchor.href = `/epindex/epindex.html?name=${data[i].Title}`;
+        Aanchor.innerHTML = `<img class="c-h-w-s" src="${data[i].banner}">`;
+        AC.append(Aanchor);
+      }
+    }
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].Type == "Anime (M)") {
+        const Aanchor = document.createElement("a");
+        Aanchor.classList.add("card");
+        Aanchor.href = `/epindex/epindex.html?name=${data[i].Title}`;
+        Aanchor.innerHTML = `<img class="c-h-w-s" src="${data[i].banner}">`;
+        AC.append(Aanchor);
+      }
+    }
+    //  </ANIME CARDS>  --------
+
+    // Top Famouse Cards Arrow Function-----------------------
+    rightArr.addEventListener("click", () => {
+      TFC.scrollLeft += Exhanchor.scrollWidth + 8;
+      leftArr.style.display = "block";
+    });
+
+    leftArr.addEventListener("click", (e) => {
+      if (screenX === 0) {
+        leftArr.style.display = "none";
+      } else leftArr.style.display = "block";
+      TFC.scrollLeft += -9999;
+    });
+
+    // Movie Cards Arrow Function ----------------------------
+    mrightArr.addEventListener("click", () => {
+      MC.scrollLeft += Exhanchor.scrollWidth + 8;
+      mleftArr.style.display = "block";
+    });
+
+    mleftArr.addEventListener("click", (e) => {
+      if (screenX === 0) {
+        mleftArr.style.display = "none";
+      } else mleftArr.style.display = "block";
+      MC.scrollLeft += -9999;
+    });
+
+    // Series Cards Arrow Function ----------------------------
+    srightArr.addEventListener("click", () => {
+      SC.scrollLeft += Exhanchor.scrollWidth + 8;
+      sleftArr.style.display = "block";
+    });
+
+    sleftArr.addEventListener("click", (e) => {
+      if (screenX === 0) {
+        sleftArr.style.display = "none";
+      } else sleftArr.style.display = "block";
+      SC.scrollLeft += -9999;
+    });
+
+    // Anime Cards Arrow Function ----------------------------
+    arightArr.addEventListener("click", () => {
+      AC.scrollLeft += Exhanchor.scrollWidth + 8;
+      aleftArr.style.display = "block";
+    });
+
     aleftArr.addEventListener("click", (e) => {
       if (screenX === 0) {
         aleftArr.style.display = "none";
@@ -211,16 +334,16 @@ function Search() {
   sc.style.borderBottomRightRadius = "0";
   twr.style.padding = "16px 9px";
   twr.style.height = "auto";
-  main.style.filter = 'brightness(0.1)'
+  main.style.filter = "brightness(0.1)";
   body.style.overflow = "hidden";
 }
 
-function normalise (){
+function normalise() {
   sc.style.borderBottomLeftRadius = "6px";
   sc.style.borderBottomRightRadius = "6px";
   twr.style.padding = "";
   twr.style.height = "0";
-  main.style.filter = ""
+  main.style.filter = "";
   body.style.overflow = "";
 }
 function Catagory() {
@@ -250,7 +373,7 @@ fetch("https://6751855ed1983b9597b336b6.mockapi.io/all/")
         b1img.click();
       }
       if (event.keyCode === 27) {
-        normalise()
+        normalise();
       }
     });
     b1img.addEventListener("click", () => {
@@ -266,21 +389,18 @@ fetch("https://6751855ed1983b9597b336b6.mockapi.io/all/")
         fetch(`https://6751855ed1983b9597b336b6.mockapi.io/all/${TE}`)
           .then((res) => res.json())
           .then((dBgImg) => {
-            recText.href = `/epindex/epindex.html?name=${dBgImg.Title}`
+            recText.href = `/epindex/epindex.html?name=${dBgImg.Title}`;
             if (dBgImg.Recommend) {
               recText.innerHTML = `<p>${dBgImg.Title.split("_").join(
                 " "
-              )}</p><p class="recRecommendedopt">${
-                dBgImg.Recommend
-              }</p><div style="background-image: url(${
-                dBgImg.epindexbanner
-              });" class="recTBBanner"></div>`;
+              )}</p><p class="recRecommendedopt">${dBgImg.Recommend
+                }</p><div style="background-image: url(${dBgImg.epindexbanner
+                });" class="recTBBanner"></div>`;
             } else {
               recText.innerHTML = `<p>${dBgImg.Title.split("_").join(
                 " "
-              )}</p><div style="background-image: url(${
-                dBgImg.epindexbanner
-              });" class="recTBBanner"></div>`;
+              )}</p><div style="background-image: url(${dBgImg.epindexbanner
+                });" class="recTBBanner"></div>`;
             }
           });
         twr.append(recText);
@@ -288,6 +408,43 @@ fetch("https://6751855ed1983b9597b336b6.mockapi.io/all/")
     });
   });
 
+fetch("https://6751855ed1983b9597b336b6.mockapi.io/sall")
+  .then((res) => res.json())
+  .then((data) => {
+    let allDN = data.map((e) => {
+      return e.Title;
+    });
+    b1img.addEventListener("click", () => {
+      let Searchedvalue = allDN.filter((sdn) => {
+        return sdn
+          .toLowerCase()
+          .includes(sInpt.value.toLowerCase().split(" ").join("_"));
+      });
+      Searchedvalue.forEach((TE) => {
+        twr.innerHTML = "";
+        let recText = document.createElement("a");
+        recText.classList.add("recText");
+        fetch(`https://6751855ed1983b9597b336b6.mockapi.io/sall/${TE}`)
+          .then((res) => res.json())
+          .then((dBgImg) => {
+            recText.href = `/epindex/epindex.html?name=${dBgImg.Title}`;
+            if (dBgImg.Recommend) {
+              recText.innerHTML = `<p>${dBgImg.Title.split("_").join(
+                " "
+              )}</p><p class="recRecommendedopt">${dBgImg.Recommend
+                }</p><div style="background-image: url(${dBgImg.epindexbanner
+                });" class="recTBBanner"></div>`;
+            } else {
+              recText.innerHTML = `<p>${dBgImg.Title.split("_").join(
+                " "
+              )}</p><div style="background-image: url(${dBgImg.epindexbanner
+                });" class="recTBBanner"></div>`;
+            }
+          });
+        twr.append(recText);
+      });
+    });
+  });
 
 // recText.addEventListener("click", (e) => {
 //   let recCard = document.createElement("a");
